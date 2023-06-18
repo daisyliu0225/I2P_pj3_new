@@ -19,7 +19,7 @@ int State::evaluate(){
     for(int j=0;j<BOARD_W;j++){
       int nowpiece = self_board[i][j];
       int strong = 1;
-      if((i==2 || i==3) && j==2) strong  = 10;
+      if((i==2 || i==3) && j==2) strong  = 5;
       switch(nowpiece){
         case 1: //1 means pawn
           score = score + 2 * strong ;
