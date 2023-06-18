@@ -13,7 +13,39 @@
  */
 int State::evaluate(){
   // [TODO] design your own evaluation function
-  return 0;
+  int score = 0;
+  auto self_board = this->board.board[this->player];
+  for(int i=0;i<BOARD_H;i++){
+    for(int j=0;j<BOARD_W;j++){
+      int nowpiece = self_board[i][j];
+      switch(nowpiece){
+        case 1: //1 means pawn
+          score = score + 2 ;
+          break;
+        
+        case 2: //2 means rook
+          score = score + 6;
+          break;
+        
+        case 3: //3 means knight
+          score = score + 7;
+          break;
+
+        case 4: //4 means bishop
+          score = score + 8;
+          break;
+        
+        case 5: //5 means queen
+          score = score + 20;
+          break;
+
+        case 6: //6 means king
+          score = score + 50;
+          break;
+      }
+    }
+  }
+  return score;
 }
 
 

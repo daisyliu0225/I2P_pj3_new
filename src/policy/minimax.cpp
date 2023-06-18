@@ -1,4 +1,5 @@
 #include <cstdlib>
+#include <iostream>
 #include <limits>
 
 #include "../state/state.hpp"
@@ -16,7 +17,8 @@
 Move Minimax::get_move(State *state, int depth){
   if(!state->legal_actions.size())
     state->get_legal_actions();
-
+  
+  std::cout<<"crash"<<std::endl;
   int sz = state->legal_actions.size();
   int bestmove;
   int bestvalue = std::numeric_limits<int>::min();
