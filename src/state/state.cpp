@@ -71,7 +71,7 @@ int State::evaluate(){
           break;
 
         case 6:
-          oppscore = oppscore - 900;
+          oppscore = oppscore - 00;
       }
     }
   }
