@@ -20,7 +20,7 @@ Move Minimax::get_move(State *state, int depth){
   
   std::cout<<"crash"<<std::endl;
   int sz = state->legal_actions.size();
-  int bestmove;
+  int bestmove = 0;
   int bestvalue = std::numeric_limits<int>::min();
   for(int i=0;i<sz;i++){
     int value = getminimax(state->next_state(state->legal_actions[i]), depth-1);
@@ -56,4 +56,5 @@ int Minimax::getminimax(State *state, int depth){
     }
     return opp_best;
   }
+  return 0;
 }
