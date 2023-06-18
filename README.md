@@ -15,32 +15,32 @@ Create repo <br />
 The last one seem to crash and the way to access is way~~~ to troublesome <br />
 --2023/06/17 12:30 AM <br />
 
-Create minimax files and ensure it can move
+Create minimax files and ensure it can move <br />
 --2023/06/17 1:00 AM <br />
 
-Write the minimax files and compile.
+Write the minimax files and compile. <br />
 It passed compiler but cannot move, it may be because of the evaluation <br />
 --2023/06/17 10:22:20 AM <br />
 
-Finished evaluation function
+Finished evaluation function <br />
 --2023/06/17 11:15:19 AM <br />
 
-Minimax bug problem fixed.
+Minimax bug problem fixed. <br />
 I ignored the depth.QQ <br />
 The version now can successfully beat the random player, but cannot beat the minimax player. <br />
 Evaluation should be renewed. <br />
 --2023/06/18 21:37:00 PM <br />
 
-Depth of minimax is 5. 
+Depth of minimax is 5. <br />
 --2023/06/18 21:45:15 PM <br />
 
-Update the evaluation function
+Update the evaluation function <br />
 The last one may be too weak. I renewed the function by adding where the chesspieces are.
 > Some of the reference comes from here : https://www.managertoday.com.tw/eightylife/article/view/673?/article/view/673
 
 --2023/06/18 22:36:56 PM <br />
 
-Update the evaluation function
+Update the evaluation function <br />
 The last evaluation function is weak, though it can beat the random one, it cannot beat baseline2. <br />
 Tried another function and it made draws with baseline2.<br />
 > reference : https://www.freecodecamp.org/news/simple-chess-ai-step-by-step-1d55a9266977/
