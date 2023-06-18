@@ -37,7 +37,7 @@ Evaluation should be renewed. <br />
 The last one may be too weak. I renewed the function by adding where the chesspieces are.
 > Some of the reference comes from here : https://www.managertoday.com.tw/eightylife/article/view/673?/article/view/673
 
---2023/06/18 22:17:41 PM
+--2023/06/18 22:36:56 PM
 
 
 
