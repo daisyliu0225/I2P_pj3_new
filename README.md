@@ -49,12 +49,31 @@ Tried another function and it made draws with baseline2.<br />
 --2023/06/18 23:50:45PM <br />
 
 ### alpha-beta version
-
+Create alpha_beta files <br />
+--2023/06/19 00:09:10 AM <br />
 
 
 
 
 ## no-so-important-feelings
-Why am I here doing this?
-I should be playing games and socializing with my friends now...
-I ate two meals of fast food. The clerk asked me why am I here.
+
+Why am I here doing this? <br />
+I should be playing games and socializing with my friends now... <br />
+--2023/06/16 <br />
+<br />
+I ate two meals of fast food. The clerk asked me why am I here. <br />
+I said that I have to deal with my final project. She told me not to give up. <br />
+--2023/06/17 <br />
+<br />
+I wandered around the school with my roommates because I cannot deal with the "Invalid action" problem. <br />
+After wandering, I decided to go home. <br />
+--2023/06/17 <br />
+<br />
+Cannot deal with the Invalid action and asked TA using eeclass. <br />
+--2023/06/18 <br />
+<br />
+Finally found the problem!<br />
+It is because I ignored the depth!<br />
+Closer to finish the project!<br />
+--2023/06/18 <br />
+<br />
