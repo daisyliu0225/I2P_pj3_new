@@ -29,8 +29,7 @@ Move Minimax::get_move(State *state, int depth){
       bestvalue = value;
     }
   }
-  auto actions = state->legal_actions;
-  return actions[bestmove];
+  return state->legal_actions[bestmove];
 }
 
 int Minimax::getminimax(State *state, int depth){
@@ -49,7 +48,7 @@ int Minimax::getminimax(State *state, int depth){
     }
     return player_best;
   }else if(!state->player){
-    //it is time for your opponent to choose, hw or she should choose the min, which can possibly beat you
+    //it is time for your opponent to choose, he or she should choose the min, which can possibly beat you
     int opp_best = std::numeric_limits<int>::max();
     for(int i=0;i<sz;i++){
       int value = getminimax(state->next_state(state->legal_actions[i]), depth-1);
