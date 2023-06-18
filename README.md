@@ -18,9 +18,9 @@ the alpha-beta method:
 
 2023/06/17 11:15:19 AM finished evaluation.
 
-2023/06/18 21:37:00 PM minimax bug problem fixed. I ignored the depth.QQ
-The version now can successfully beat the random player, but cannot beat the minimax player.
-Evaluation should be renewed.
+2023/06/18 21:37:00 PM minimax bug problem fixed. I ignored the depth.QQ <br />
+The version now can successfully beat the random player, but cannot beat the minimax player. <br />
+Evaluation should be renewed. <br />
 
 2023/06/18 21:45:15 PM the depth of minimax is 5. Going to renew evaluation.
 
