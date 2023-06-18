@@ -28,25 +28,26 @@ int State::evaluate(){
       else if(j == 1 || j == 3) alterj = 5;
       else if(j == 2) alterj = 8;
 
+      //* (alteri+alterj)
       switch(nowpiece){
         case 1: //1 means pawn
-          score = score + 1 * (alteri+alterj) ;
+          score = score + 1  ;
           break;
         
         case 2: //2 means rook
-          score = score + 3 * (alteri+alterj);
+          score = score + 3 ;
           break;
         
         case 3: //3 means knight
-          score = score + 3 * (alteri+alterj);
+          score = score + 3 ;
           break;
 
         case 4: //4 means bishop
-          score = score + 5 * (alteri+alterj);
+          score = score + 5 ;
           break;
         
         case 5: //5 means queen
-          score = score + 9 * (alteri+alterj);
+          score = score + 9 ;
           break;
       }
     }
