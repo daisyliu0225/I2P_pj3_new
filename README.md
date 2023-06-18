@@ -22,7 +22,12 @@ the alpha-beta method:
 The version now can successfully beat the random player, but cannot beat the minimax player.
 Evaluation should be renewed.
 
-2023/06/18 21:45:15 PM the depth of minimax is 5.
+2023/06/18 21:45:15 PM the depth of minimax is 5. Going to renew evaluation.
+
+2023/06/18 22:1741 PM update the evaluation function since the last one may be too weak.
+
+> Some of the reference comes from here : https://www.managertoday.com.tw/eightylife/article/view/673?/article/view/673
+
 
 
 
