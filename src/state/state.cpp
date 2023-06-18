@@ -30,7 +30,7 @@ int State::evaluate(){
           break;
         
         case 2: //2 means rook
-          score = score + 3 ;
+          score = score + 5 ;
           break;
         
         case 3: //3 means knight
@@ -38,7 +38,7 @@ int State::evaluate(){
           break;
 
         case 4: //4 means bishop
-          score = score + 5 ;
+          score = score + 3 ;
           break;
         
         case 5: //5 means queen
@@ -56,7 +56,7 @@ int State::evaluate(){
           break;
         
         case 2: //2 means rook
-          oppscore = oppscore + 3 ;
+          oppscore = oppscore + 5 ;
           break;
         
         case 3: //3 means knight
@@ -64,7 +64,7 @@ int State::evaluate(){
           break;
 
         case 4: //4 means bishop
-          oppscore = oppscore + 5 ;
+          oppscore = oppscore + 3 ;
           break;
         
         case 5: //5 means queen
