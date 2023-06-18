@@ -22,6 +22,8 @@ the alpha-beta method:
 The version now can successfully beat the random player, but cannot beat the minimax player.
 Evaluation should be renewed.
 
+2023/06/18 21:45:15 PM the depth of minimax is 5.
+
 
 
 
