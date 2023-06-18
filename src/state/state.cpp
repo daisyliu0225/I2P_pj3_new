@@ -23,56 +23,55 @@ int State::evaluate(){
       int nowpiece = self_board[i][j];
       int opppiece = opp_board[i][j];
 
-      //* (alteri+alterj)
       switch(nowpiece){
         case 1: //1 means pawn
-          score = score + 1 ;
+          score = score + 10 ;
           break;
         
         case 2: //2 means rook
-          score = score + 5 ;
+          score = score + 50 ;
           break;
         
         case 3: //3 means knight
-          score = score + 3 ;
+          score = score + 30 ;
           break;
 
         case 4: //4 means bishop
-          score = score + 3 ;
+          score = score + 30 ;
           break;
         
         case 5: //5 means queen
-          score = score + 9 ;
+          score = score + 90 ;
           break;
         
         case 6:
-          score = score + 200;
+          score = score + 900;
           break;
       }
 
       switch(opppiece){
         case 1: //1 means pawn
-          oppscore = oppscore + 1 ;
+          oppscore = oppscore - 10 ;
           break;
         
         case 2: //2 means rook
-          oppscore = oppscore + 5 ;
+          oppscore = oppscore - 50 ;
           break;
         
         case 3: //3 means knight
-          oppscore = oppscore + 3 ;
+          oppscore = oppscore - 30 ;
           break;
 
         case 4: //4 means bishop
-          oppscore = oppscore + 3 ;
+          oppscore = oppscore - 30 ;
           break;
         
         case 5: //5 means queen
-          oppscore = oppscore + 9 ;
+          oppscore = oppscore - 90 ;
           break;
 
         case 6:
-          oppscore = oppscore + 200;
+          oppscore = oppscore - 900;
       }
     }
   }
