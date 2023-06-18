@@ -41,7 +41,9 @@ The last one may be too weak. I renewed the function by adding where the chesspi
 
 ### Update the evaluation function
 The last evaluation function is weak, though it can beat the random one, it cannot beat baseline2. <br />
-Tried another function and it made draws with baseline2.
+Tried another function and it made draws with baseline2.<br />
+> reference : https://www.freecodecamp.org/news/simple-chess-ai-step-by-step-1d55a9266977/
+
 --2023/06/18 23:50:45PM
 
 
