@@ -20,34 +20,34 @@ int State::evaluate(){
       int nowpiece = self_board[i][j];
       int alteri = i;
       int alterj = j;
-      if(i == 0 || i == 5) alteri = 2;
-      else if(i == 1 || i == 4) alteri = 5;
-      else if(i == 2 || i == 3) alteri = 8;
+      if(i == 0 || i == 5) alteri = 0.5;
+      else if(i == 1 || i == 4) alteri = 1;
+      else if(i == 2 || i == 3) alteri = 1.5;
 
-      if(j == 0 || j == 4) alterj = 2;
-      else if(j == 1 || j == 3) alterj = 5;
-      else if(j == 2) alterj = 8;
+      if(j == 0 || j == 4) alterj = 0.5;
+      else if(j == 1 || j == 3) alterj = 1;
+      else if(j == 2) alterj = 1.5;
 
       //* (alteri+alterj)
       switch(nowpiece){
         case 1: //1 means pawn
-          score = score + 1  ;
+          score = score + 1  * (alteri+alterj);
           break;
         
         case 2: //2 means rook
-          score = score + 3 ;
+          score = score + 3 * (alteri+alterj);
           break;
         
         case 3: //3 means knight
-          score = score + 3 ;
+          score = score + 3 * (alteri+alterj);
           break;
 
         case 4: //4 means bishop
-          score = score + 5 ;
+          score = score + 5 * (alteri+alterj);
           break;
         
         case 5: //5 means queen
-          score = score + 9 ;
+          score = score + 9 * (alteri+alterj);
           break;
       }
     }
