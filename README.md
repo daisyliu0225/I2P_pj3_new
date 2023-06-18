@@ -18,6 +18,8 @@ the alpha-beta method:
 
 2023/06/17 11:15:19 AM finished evaluation.
 
+2023/06/18 21:37:00 PM minimax bug problem fixed. I ignored the depth.QQ
+
 
 
 
