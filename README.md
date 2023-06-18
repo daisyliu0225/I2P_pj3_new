@@ -39,6 +39,10 @@ The last one may be too weak. I renewed the function by adding where the chesspi
 
 --2023/06/18 22:36:56 PM
 
+### Update the evaluation function
+The last evaluation function is weak, though it can beat the random one, it cannot beat baseline2. <br />
+Tried another function and it made draws with baseline2.
+--2023/06/18 23:50:45PM
 
 
 
