@@ -34,6 +34,7 @@ Evaluation should be renewed. <br />
 Depth of minimax is 5. <br />
 --2023/06/18 21:45:15 PM <br />
 
+### Updated evaluation function version
 Update the evaluation function <br />
 The last one may be too weak. I renewed the function by adding where the chesspieces are.
 > Some of the reference comes from here : https://www.managertoday.com.tw/eightylife/article/view/673?/article/view/673
