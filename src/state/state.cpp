@@ -75,8 +75,8 @@ int State::evaluate(){
       }
     }
   }
-  //finalscore = score-oppscore;
-  return score;
+  finalscore = score-oppscore;
+  return finalscore;
 }
 
 
