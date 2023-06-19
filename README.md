@@ -10,7 +10,7 @@ the alpha-beta method:
 
 ## versions
 
-### minimax version
+### V1 -- Minimax Version
 Create repo <br />
 The last one seem to crash and the way to access is way~~~ to troublesome <br />
 --2023/06/17 12:30 AM <br />
@@ -34,7 +34,7 @@ Evaluation should be renewed. <br />
 Depth of minimax is 5. <br />
 --2023/06/18 21:45:15 PM <br />
 
-### Updated evaluation function version
+### V2 -- Updated Evaluation Function Version
 Update the evaluation function <br />
 The last one may be too weak. I renewed the function by adding where the chesspieces are.
 > Some of the reference comes from here : https://www.managertoday.com.tw/eightylife/article/view/673?/article/view/673
@@ -48,9 +48,12 @@ Tried another function and it made draws with baseline2.<br />
 
 --2023/06/18 23:50:45PM <br />
 
-### alpha-beta version
+### V3 -- Alpha Beta Pruning Version
 Create alpha_beta files <br />
 --2023/06/19 00:09:10 AM <br />
+
+Finished alpha beta pruning <br />
+--2023/06/19 23:02:25 PM <br />
 
 
 
@@ -78,3 +81,13 @@ It is because I ignored the depth!<br />
 Closer to finish the project!<br />
 --2023/06/18 <br />
 <br />
+Oh no! Server has crashed. TT <br />
+--2023/06/19 <br />
+<br />
+Have some fun with my friends :) <br />
+Start coding! <br />
+--2023/06/19 <br />
+<br />
+Finished alpha beta pruning! <br />
+It is really fast! Wow! <br />
+--2023/06/19 <br />
