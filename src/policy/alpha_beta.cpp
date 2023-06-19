@@ -47,7 +47,7 @@ int Alpha_Beta::getalphabeta(State *state, int depth, int alpha, int beta, int m
     for(int i=0;i<sz;i++){
       int value = getalphabeta(state->next_state(state->legal_actions[i]), depth-1, alpha, beta ,0);
       if(player_best < value) player_best = value;
-      if(value >= beta) break;
+      if(value > beta) break;
       if(alpha < value) alpha = value;
     }
     return player_best;
@@ -57,7 +57,7 @@ int Alpha_Beta::getalphabeta(State *state, int depth, int alpha, int beta, int m
     for(int i=0;i<sz;i++){
       int value = getalphabeta(state->next_state(state->legal_actions[i]), depth-1, alpha, beta, 1);
       if(opp_best > value) opp_best = value;
-      if(value <= alpha) break;
+      if(value < alpha) break;
       if(beta > value) beta = value;
     }
     return opp_best;
