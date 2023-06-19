@@ -44,7 +44,7 @@ int Alpha_Beta::getalphabeta(State *state, int depth, int alpha, int beta, int m
     //it is time for the player(you) to choose
     int player_best = std::numeric_limits<int>::min();
     for(int i=0;i<sz;i++){
-      int value = getalphabeta(state->next_state(state->legal_actions[i]), depth-1, alpha, beta ,0);
+      int value = getalphabeta(state->next_state(state->legal_actions[i]), depth-1, alpha, beta ,0) + sz;
       if(player_best < value) player_best = value;
       if(alpha < value) alpha = value;
       if(alpha >= beta) break;
@@ -54,7 +54,7 @@ int Alpha_Beta::getalphabeta(State *state, int depth, int alpha, int beta, int m
     //it is time for your opponent to choose, he or she should choose the min, which can possibly beat you
     int opp_best = std::numeric_limits<int>::max();
     for(int i=0;i<sz;i++){
-      int value = getalphabeta(state->next_state(state->legal_actions[i]), depth-1, alpha, beta, 1);
+      int value = getalphabeta(state->next_state(state->legal_actions[i]), depth-1, alpha, beta, 1) + sz;
       if(opp_best > value) opp_best = value;
       if(beta > value) beta = value;
       if(beta <= alpha) break;
