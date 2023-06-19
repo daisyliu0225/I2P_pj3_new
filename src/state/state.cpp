@@ -25,49 +25,54 @@ int State::evaluate(){
 
       switch(nowpiece){
         case 1: //1 means pawn
-          score = score + 2 ;
+          score = score + 10 ;
           break;
         
         case 2: //2 means rook
-          score = score + 6 ;
+          score = score + 50 ;
           break;
         
         case 3: //3 means knight
-          score = score + 7 ;
+          score = score + 30 ;
           break;
 
         case 4: //4 means bishop
-          score = score + 8 ;
+          score = score + 30 ;
           break;
         
         case 5: //5 means queen
-          score = score + 20 ;
+          score = score + 90 ;
           break;
         
+        case 6 :
+          score = score + 900;
+          break;
       }
 
       switch(opppiece){
         case 1: //1 means pawn
-          oppscore = oppscore - 2 ;
+          oppscore = oppscore - 10 ;
           break;
         
         case 2: //2 means rook
-          oppscore = oppscore - 6 ;
+          oppscore = oppscore - 50 ;
           break;
         
         case 3: //3 means knight
-          oppscore = oppscore - 7 ;
+          oppscore = oppscore - 30 ;
           break;
 
         case 4: //4 means bishop
-          oppscore = oppscore - 8 ;
+          oppscore = oppscore - 30 ;
           break;
         
         case 5: //5 means queen
-          oppscore = oppscore - 20 ;
+          oppscore = oppscore - 90 ;
           break;
 
-
+        case 6:
+          oppscore = oppscore - 900;
+          break;
       }
     }
   }
