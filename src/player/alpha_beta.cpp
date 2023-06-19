@@ -21,7 +21,8 @@ void read_board(std::ifstream& fin) {
   for (int pl=0; pl<2; pl++) {
     for (int i=0; i<BOARD_H; i++) {
       for (int j=0; j<BOARD_W; j++) {
-        int c; fin >> c;
+        int c; 
+        fin >> c;
         // std::cout << c << " ";
         board.board[pl][i][j] = c;
       }

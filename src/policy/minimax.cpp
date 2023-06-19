@@ -18,7 +18,7 @@ Move Minimax::get_move(State *state, int depth){
   if(!state->legal_actions.size())
     state->get_legal_actions();
   
-  std::cout<<"crash"<<std::endl;
+  //std::cout<<"crash"<<std::endl;
   int sz = state->legal_actions.size();
   int bestmove = 0;
   int bestvalue = std::numeric_limits<int>::min();
