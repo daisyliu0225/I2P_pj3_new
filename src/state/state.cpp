@@ -21,27 +21,27 @@ int State::evaluate(){
   for(int i=0;i<BOARD_H;i++){
     for(int j=0;j<BOARD_W;j++){
       int nowpiece = self_board[i][j];
-      //int opppiece = opp_board[i][j];
+      int opppiece = opp_board[i][j];
 
       switch(nowpiece){
         case 1: //1 means pawn
-          score = score + 1 ;
+          score = score + 10 ;
           break;
         
         case 2: //2 means rook
-          score = score + 5 ;
+          score = score + 50 ;
           break;
         
         case 3: //3 means knight
-          score = score + 3 ;
+          score = score + 30 ;
           break;
 
         case 4: //4 means bishop
-          score = score + 3 ;
+          score = score + 30 ;
           break;
         
         case 5: //5 means queen
-          score = score + 9 ;
+          score = score + 90 ;
           break;
         
         case 6:
@@ -49,7 +49,7 @@ int State::evaluate(){
           break;
       }
 
-      /*switch(opppiece){
+      switch(opppiece){
         case 1: //1 means pawn
           oppscore = oppscore - 10 ;
           break;
@@ -72,7 +72,7 @@ int State::evaluate(){
 
         case 6:
           oppscore = oppscore - 900;
-      }*/
+      }
     }
   }
   //finalscore = score-oppscore;
