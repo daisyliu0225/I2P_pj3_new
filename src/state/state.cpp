@@ -26,12 +26,12 @@ int State::evaluate(){
       self_piece = self_board[i][j];
       opp_piece = opp_board[i][j];
       if(i == 0 || i == 5) alphai = 1;
-      else if(i == 1 || i == 4) alphai = 2;
-      else if(i == 2 || i == 3) alphai = 3;
+      else if(i == 1 || i == 4) alphai = 3;
+      else if(i == 2 || i == 3) alphai = 5;
 
       if(j == 0 || j == 4) alphaj = 1;
-      else if(j==1 || j==3) alphaj = 2;
-      else if(j == 2) alphaj = 3;
+      else if(j==1 || j==3) alphaj = 3;
+      else if(j == 2) alphaj = 5;
 
       int add = alphai * alphaj;
 
@@ -40,13 +40,13 @@ int State::evaluate(){
           self_score = self_score + 10 + add;
           break;
         case 2: //2 is rook
-          self_score = self_score + 50 + add;
+          self_score = self_score + 30 + add;
           break;
         case 3: //3 is knight
           self_score = self_score + 30 + add;
           break;
         case 4: //4 is bishop
-          self_score = self_score + 30 + add;
+          self_score = self_score + 50 + add;
           break;
         case 5: //5 is queen
           self_score = self_score + 90 + add;
@@ -61,13 +61,13 @@ int State::evaluate(){
           opp_score = opp_score + 10 - add;
           break;
         case 2: //2 is rook
-          opp_score = opp_score + 50 - add;
+          opp_score = opp_score + 30 - add;
           break;
         case 3: //3 is knight
           opp_score = opp_score + 30 - add;
           break;
         case 4: //4 is bishop
-          opp_score = opp_score + 30 - add;
+          opp_score = opp_score + 50 - add;
           break;
         case 5: //5 is queen
           opp_score = opp_score + 90 - add;
