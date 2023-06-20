@@ -56,7 +56,7 @@ int State::evaluate(){
           break;
 
         case 6: //6 means king
-          score = score - 90 + add;
+          score = score + 90 + add;
           break;
       }
 
