@@ -41,9 +41,20 @@ Noun explaination : <br />
 |mytable|The chesspieces on my side|
 |opptable|The chesspieces on the opponent's side|
 |my/opp_(chesspiece)|The specific chesspiece on my/opponent's board|
+|my_score|The heuristic value on my side|
+|opp_score|The heuristic value on the opponent's side|
 
-#### Table 1:
-score = my_queen * 20 + my_
+#### Table 1: Only the score on my side <br />
+score = my_queen * 20 + my_bishop * 8 + my_knight * 7 + my_rook * 6 + my_pawn * 2 <br />
+result: 1 lose 1 draw <br />
+
+#### Table 2: The relative score <br />
+my_score = my_queen * 20 + my_bishop * 8 + my_knight * 7 + my_rook * 6 + my_pawn * 2 <br />
+opp_score = opp_queen * 20 + opp_bishop * 8 + opp_knight * 7 + opp_rook * 6 + opp_pawn * 2 <br />
+result: 1 lose 1 draw <br />
+
+#### Table 3: Relative Score + Weighted score according to location <br />
+**Location Chart** <br />
 
 ## versions
 
