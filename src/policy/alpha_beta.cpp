@@ -39,12 +39,11 @@ int Alpha_Beta::getalphabeta(State *state, int depth, int alpha, int beta, int m
   }
   // if the tree goes to the final node or reaches the lowest depth, then it gives back the value
 
-  int sz = state->legal_actions.size();
   if(maximizeplayer==1){
     //it is time for the player(you) to choose
     int player_best = -2147483647;
-    for(int i=0;i<sz;i++){
-      int value = getalphabeta(state->next_state(state->legal_actions[i]), depth-1, alpha, beta ,0);
+    for(auto it : state -> legal_actions){
+      int value = getalphabeta(state->next_state(it), depth-1, alpha, beta ,0);
       if(player_best < value) player_best = value;
       if(alpha < value) alpha = value;
       if(alpha >= beta) break;
@@ -53,8 +52,8 @@ int Alpha_Beta::getalphabeta(State *state, int depth, int alpha, int beta, int m
   }else if(maximizeplayer == 0){
     //it is time for your opponent to choose, he or she should choose the min, which can possibly beat you
     int opp_best = 2147483647;
-    for(int i=0;i<sz;i++){
-      int value = getalphabeta(state->next_state(state->legal_actions[i]), depth-1, alpha, beta, 1);
+    for(auto it : state -> legal_actions){
+      int value = getalphabeta(state->next_state(it), depth-1, alpha, beta, 1);
       if(opp_best > value) opp_best = value;
       if(beta > value) beta = value;
       if(beta <= alpha) break;
