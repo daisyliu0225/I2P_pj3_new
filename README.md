@@ -61,7 +61,7 @@ result: 1 lose 1 draw <br />
 |0 or 5|1|
 |1 or 4|2|
 |2 or 3|3|
-<br />
+
 |j|score|
 |---|---|
 |0 or 4|1|
