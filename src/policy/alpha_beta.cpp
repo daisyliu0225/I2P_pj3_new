@@ -18,19 +18,18 @@ Move Alpha_Beta::get_move(State *state, int depth){
   if(!state->legal_actions.size())
     state->get_legal_actions();
   
-  int sz = state->legal_actions.size();
-  int bestmove = 0;
+  Move bestmove;
   int bestvalue = std::numeric_limits<int>::min();
   int mininf = std::numeric_limits<int>::min();
   int maxinf = std::numeric_limits<int>::max();
-  for(int i=0;i<sz;i++){
-    int value = getalphabeta(state->next_state(state->legal_actions[i]), depth-1, mininf, maxinf, 1);
+  for(auto it : state -> legal_actions){
+    int value = getalphabeta(state->next_state(it), depth-1, mininf, maxinf, 1);
     if(value > bestvalue){
-      bestmove = i;
+      bestmove = it;
       bestvalue = value;
     }
   }
-  return state->legal_actions[bestmove];
+  return bestmove;
 }
 
 int Alpha_Beta::getalphabeta(State *state, int depth, int alpha, int beta, int maximizeplayer){
