@@ -87,6 +87,9 @@ score = my_score - opp_score <br />
 result: 2 wins <br />
 PS: I don't know what happened, but this is really the result. <br />
 
+#### Summary 
+It is obvious that table 4 has the best result as it has two wins. <br />
+
 ## versions
 
 
