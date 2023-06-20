@@ -21,7 +21,7 @@ Move Minimax::get_move(State *state, int depth){
   //std::cout<<"crash"<<std::endl;
   int sz = state->legal_actions.size();
   int bestmove = 0;
-  int bestvalue = std::numeric_limits<int>::min();
+  int bestvalue = -2147483647;
   for(int i=0;i<sz;i++){
     int value = getminimax(state->next_state(state->legal_actions[i]), depth-1, 1);
     if(value > bestvalue){
@@ -41,7 +41,7 @@ int Minimax::getminimax(State *state, int depth, int maximizeplayer){
   int sz = state->legal_actions.size();
   if(maximizeplayer==1){
     //it is time for the player(you) to choose
-    int player_best = std::numeric_limits<int>::min();
+    int player_best = -2147483647;
     for(int i=0;i<sz;i++){
       int value = getminimax(state->next_state(state->legal_actions[i]), depth-1, 0);
       if(player_best < value) player_best = value;
@@ -49,7 +49,7 @@ int Minimax::getminimax(State *state, int depth, int maximizeplayer){
     return player_best;
   }else{
     //it is time for your opponent to choose, he or she should choose the min, which can possibly beat you
-    int opp_best = std::numeric_limits<int>::max();
+    int opp_best = 2147483647;
     for(int i=0;i<sz;i++){
       int value = getminimax(state->next_state(state->legal_actions[i]), depth-1, 1);
       if(opp_best > value) opp_best = value;
