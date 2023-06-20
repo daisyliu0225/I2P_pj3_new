@@ -78,7 +78,7 @@ score = my_score - opp_score <br />
 result: 1 lose 1 draw
 
 #### Table 4: Relative Score + Weighted Score according to location ~ version 2
-The location chart and the score are the same
+The location chart and the score are the same <br />
 However... <br />
 my_score = (my_queen * 20 + weighted_score) + (my_bishop * 8 + weighted_score) + (my_knight * 7 + weighted_score) + (my_rook * 6 + weighted_score) + (my_pawn * 2 + weighted_score) <br />
 opp_score = (opp_queen * 20 - weighted_score) + (opp_bishop * 8 - weighted_score) + (opp_knight * 7 - weighted_score) + (opp_rook * 6 - weighted_score) + (opp_pawn * 2 - weighted_score) <br />
