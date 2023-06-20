@@ -1,4 +1,4 @@
-# NTHU I2P3   MiniChess AI
+# NTHU I2P2 Project3 -- MiniChess AI
 
 This is the final project for I2P2 course. It takes up 9 pts for the final score. <br />
 It is used to design and implement an AI that can play the boardgame chess.
@@ -9,6 +9,14 @@ It is used to design and implement an AI that can play the boardgame chess.
 The minimax tree chooses the maximum when it is the player's turn and chooses the minimum when it is the opponent's turn. <br />
 The psudocode: <br />
 ![minimax](https://github.com/daisyliu0225/I2P_pj3_new/assets/50540881/947ae5cc-f9c9-4bdf-b088-89f8abea0155)
+<br />
+The code I wrote: <br />
+Get move function: <br />
+![minimax_getmove](https://github.com/daisyliu0225/I2P_pj3_new/assets/50540881/a6614fbd-e5cb-440b-9cfc-97a4ccac1d29)
+<br />
+Minimax Function: <br />
+![minimax_minimax](https://github.com/daisyliu0225/I2P_pj3_new/assets/50540881/c284c831-df39-4734-bda3-5cf4efda567e)
+<br />
 
 ### The Alpha-Beta Method: <br />
 By pruning the branches of the minimax tree. We can get a much faster algorithm. <br />
@@ -18,11 +26,69 @@ The psudocode: <br />
 <br />
 The code I wrote: <br />
 Get move function: <br />
-![alpha_beta_get_move](https://github.com/daisyliu0225/I2P_pj3_new/assets/50540881/39751a3c-f6c6-45b5-b823-8cf34cc82c63)
+![alpha_beta_get_move](https://github.com/daisyliu0225/I2P_pj3_new/assets/50540881/bb259841-15bd-49c6-ad9a-8c0a26e85801)
 <br />
 Alpha Beta function: <br />
-![alpha_beta_get_alphabeta](https://github.com/daisyliu0225/I2P_pj3_new/assets/50540881/dc8143cc-df4f-44a4-9370-0beade1ec66f)
+![alpha_beta_get_alphabeta](https://github.com/daisyliu0225/I2P_pj3_new/assets/50540881/9190f68f-5091-4ae4-8af0-58c657424d69)
 <br />
+
+### Evaluation: <br />
+There are a lot of ways to evaluate. Here is what I tried. <br />
+#### Noun explaination
+|Nouns|Definition|
+|----|----|
+|score|The heuristic value I returned|
+|mytable|The chesspieces on my side|
+|opptable|The chesspieces on the opponent's side|
+|my/opp_(chesspiece)|The specific chesspiece on my/opponent's board|
+|my_score|The heuristic value on my side|
+|opp_score|The heuristic value on the opponent's side|
+
+#### Table 1: Only the score on my side <br />
+score = my_queen * 20 + my_bishop * 8 + my_knight * 7 + my_rook * 6 + my_pawn * 2 <br />
+result: 1 lose 1 draw <br />
+
+#### Table 2: The relative score <br />
+my_score = my_queen * 20 + my_bishop * 8 + my_knight * 7 + my_rook * 6 + my_pawn * 2 <br />
+opp_score = opp_queen * 20 + opp_bishop * 8 + opp_knight * 7 + opp_rook * 6 + opp_pawn * 2 <br />
+score = my_score - opp_score <br />
+result: 1 lose 1 draw <br />
+
+#### Table 3: Relative Score + Weighted score according to location <br />
+**Location Chart** <br />
+|i|score|
+|---|---|
+|0 or 5|1|
+|1 or 4|2|
+|2 or 3|3|
+
+|j|score|
+|---|---|
+|0 or 4|1|
+|1 or 3|2|
+|2|2|
+<br />
+weighted score = score_i * score_j
+<br />
+Therefore... <br />
+my_score = (my_queen * 20 + weighted_score) + (my_bishop * 8 + weighted_score) + (my_knight * 7 + weighted_score) + (my_rook * 6 + weighted_score) + (my_pawn * 2 + weighted_score) <br />
+opp_score = (opp_queen * 20 + weighted_score) + (opp_bishop * 8 + weighted_score) + (opp_knight * 7 + weighted_score) + (opp_rook * 6 + weighted_score) + (opp_pawn * 2 + weighted_score) <br />
+<br />
+score = my_score - opp_score <br />
+result: 1 lose 1 draw
+
+#### Table 4: Relative Score + Weighted Score according to location ~ version 2
+The location chart and the score are the same <br />
+However... <br />
+my_score = (my_queen * 20 + weighted_score) + (my_bishop * 8 + weighted_score) + (my_knight * 7 + weighted_score) + (my_rook * 6 + weighted_score) + (my_pawn * 2 + weighted_score) <br />
+opp_score = (opp_queen * 20 - weighted_score) + (opp_bishop * 8 - weighted_score) + (opp_knight * 7 - weighted_score) + (opp_rook * 6 - weighted_score) + (opp_pawn * 2 - weighted_score) <br />
+<br />
+score = my_score - opp_score <br />
+result: 2 wins <br />
+PS: I don't know what happened, but this is really the result. <br />
+
+#### Summary 
+It is obvious that table 4 has the best result as it has two wins. <br />
 
 ## versions
 
