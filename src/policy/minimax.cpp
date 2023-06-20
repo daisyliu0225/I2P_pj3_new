@@ -23,7 +23,7 @@ Move Minimax::get_move(State *state, int depth){
   int bestmove = 0;
   int bestvalue = -2147483647;
   for(int i=0;i<sz;i++){
-    int value = getminimax(state->next_state(state->legal_actions[i]), depth-1, 1);
+    int value = getminimax(state->next_state(state->legal_actions[i]), depth, 0);
     if(value > bestvalue){
       bestmove = i;
       bestvalue = value;
@@ -33,7 +33,7 @@ Move Minimax::get_move(State *state, int depth){
 }
 
 int Minimax::getminimax(State *state, int depth, int maximizeplayer){
-  if(depth == 0 || state->legal_actions.size()==0){
+  if(depth == 0 || !state->legal_actions.size()){
     return state->evaluate();
   }
   // if the tree goes to the final node or reaches the lowest depth, then it gives back the value

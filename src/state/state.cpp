@@ -33,41 +33,41 @@ int State::evaluate(){
       else if(j==1 || j==3) alphaj = 2;
       else if(j == 2) alphaj = 3;
 
-      int add = alphai * alphaj;
+      int add = alphai + alphaj;
 
       switch(self_piece){
         case 1: //1 is pawn
-          self_score = self_score + 2 + add;
+          self_score = self_score + 2 ;
           break;
         case 2: //2 is rook
-          self_score = self_score + 6 + add;
+          self_score = self_score + 6 ;
           break;
         case 3: //3 is knight
-          self_score = self_score + 7 + add;
+          self_score = self_score + 7 ;
           break;
         case 4: //4 is bishop
-          self_score = self_score + 8 + add;
+          self_score = self_score + 8 ;
           break;
         case 5: //5 is queen
-          self_score = self_score + 20 + add;
+          self_score = self_score + 10 ;
           break;
       }
 
       switch(opp_piece){
         case 1: //1 is pawn
-          opp_score = opp_score - 2 - add;
+          opp_score = opp_score + 2 ;
           break;
         case 2: //2 is rook
-          opp_score = opp_score - 6 - add;
+          opp_score = opp_score + 6 ;
           break;
         case 3: //3 is knight
-          opp_score = opp_score - 7 - add;
+          opp_score = opp_score + 7 ;
           break;
         case 4: //4 is bishop
-          opp_score = opp_score - 8 - add;
+          opp_score = opp_score + 8 ;
           break;
         case 5: //5 is queen
-          opp_score = opp_score - 20 - add;
+          opp_score = opp_score + 10 ;
           break;
       }
         

@@ -23,7 +23,7 @@ Move Alpha_Beta::get_move(State *state, int depth){
   int mininf = std::numeric_limits<int>::min();
   int maxinf = std::numeric_limits<int>::max();
   for(auto it : state -> legal_actions){
-    int value = getalphabeta(state->next_state(it), depth-1, mininf, maxinf, 1);
+    int value = getalphabeta(state->next_state(it), depth, mininf, maxinf, 0);
     if(value > bestvalue){
       bestmove = it;
       bestvalue = value;
