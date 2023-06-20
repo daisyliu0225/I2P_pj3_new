@@ -16,6 +16,8 @@ int State::evaluate(){
   int self_score = 0;
   int opp_score = 0;
   int final_score = 0;
+  int alphai = 0;
+  int alphaj = 0;
   auto self_board = this->board.board[this->player];
   auto opp_board = this->board.board[!this->player];
   for(int i=0;i<BOARD_H;i++){
@@ -23,22 +25,31 @@ int State::evaluate(){
       int self_piece, opp_piece;
       self_piece = self_board[i][j];
       opp_piece = opp_board[i][j];
+      if(i == 0 || i == 5) alphai = 1;
+      else if(i == 1 || i == 4) alphai = 2;
+      else if(i == 2 || i == 3) alphai = 3;
+
+      if(j == 0 || j == 4) alphaj = 1;
+      else if(j==1 || j==3) alphaj = 2;
+      else if(j == 2) alphaj = 3;
+
+      int add = alphai * alphaj;
 
       switch(self_piece){
         case 1: //1 is pawn
-          self_score = self_score + 2;
+          self_score = self_score + 2 + add;
           break;
         case 2: //2 is rook
-          self_score = self_score + 6;
+          self_score = self_score + 6 + add;
           break;
         case 3: //3 is knight
-          self_score = self_score + 7;
+          self_score = self_score + 7 + add;
           break;
         case 4: //4 is bishop
-          self_score = self_score + 8;
+          self_score = self_score + 8 + add;
           break;
         case 5: //5 is queen
-          self_score = self_score + 20;
+          self_score = self_score + 20 + add;
           break;
       }
 
