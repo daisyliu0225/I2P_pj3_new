@@ -43,7 +43,10 @@ int State::evaluate(){
         case 5: //5 means queen
           score = score + 90 ;
           break;
-
+        
+        case 6 :
+          score = score + 900;
+          break;
       }
 
       switch(opppiece){
@@ -67,6 +70,9 @@ int State::evaluate(){
           oppscore = oppscore - 90 ;
           break;
 
+        case 6:
+          oppscore = oppscore - 900;
+          break;
       }
     }
   }
