@@ -13,76 +13,57 @@
  */
 int State::evaluate(){
   // [TODO] design your own evaluation function
-  int score = 0;
-  int oppscore = 0;
-  int finalscore = 0;
+  int self_score = 0;
+  int opp_score = 0;
+  int final_score = 0;
   auto self_board = this->board.board[this->player];
   auto opp_board = this->board.board[!this->player];
   for(int i=0;i<BOARD_H;i++){
     for(int j=0;j<BOARD_W;j++){
-      int alteri = 0;
-      int alterj = 0;
-      int nowpiece = self_board[i][j];
-      int opppiece = opp_board[i][j];
-      if(i==0 || i==5) alteri = 1;
-      else if(i == 1 || i == 4) alteri = 3;
-      else if(i == 2 || i == 3) alteri = 5;
+      int self_piece, opp_piece;
+      self_piece = self_board[i][j];
+      opp_piece = opp_board[i][j];
 
-      if(j==0 || j==5) alterj = 1;
-      else if(j == 1 || j == 4) alterj = 3;
-      else if(j == 2 || j == 3) alterj = 5;
-
-      int add = alteri + alterj;
-
-      switch(nowpiece){
-        case 1: //1 means pawn
-          score = score + 10 + add ;
+      switch(self_piece){
+        case 1: //1 is pawn
+          self_score = self_score + 2;
           break;
-        
-        case 2: //2 means rook
-          score = score + 50 + add ;
+        case 2: //2 is rook
+          self_score = self_score + 6;
           break;
-        
-        case 3: //3 means knight
-          score = score + 30 + add;
+        case 3: //3 is knight
+          self_score = self_score + 7;
           break;
-
-        case 4: //4 means bishop
-          score = score + 30 + add;
+        case 4: //4 is bishop
+          self_score = self_score + 8;
           break;
-        
-        case 5: //5 means queen
-          score = score + 90 + add;
+        case 5: //5 is queen
+          self_score = self_score + 20;
           break;
-
       }
 
-      switch(opppiece){
-        case 1: //1 means pawn
-          oppscore = oppscore - 10 - add;
+      switch(opp_piece){
+        case 1: //1 is pawn
+          opp_score = opp_score - 2;
           break;
-        
-        case 2: //2 means rook
-          oppscore = oppscore - 50 - add;
+        case 2: //2 is rook
+          opp_score = opp_score - 6;
           break;
-        
-        case 3: //3 means knight
-          oppscore = oppscore - 30 - add;
+        case 3: //3 is knight
+          opp_score = opp_score - 7;
           break;
-
-        case 4: //4 means bishop
-          oppscore = oppscore - 30 - add;
+        case 4: //4 is bishop
+          opp_score = opp_score - 8;
           break;
-        
-        case 5: //5 means queen
-          oppscore = oppscore - 90 - add;
+        case 5: //5 is queen
+          opp_score = opp_score - 20;
           break;
-
       }
+        
     }
   }
-  finalscore = score-oppscore;
-  return finalscore;
+  final_score = self_score - opp_score;
+  return final_score;
 }
 
 
