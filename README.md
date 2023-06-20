@@ -1,7 +1,7 @@
 # NTHU I2P3   MiniChess AI
 
-This is the final project for I2P2 course. It takes up 9 pts for the final score.
-It is used to design and implement an AIthat can play the boardgame chess.
+This is the final project for I2P2 course. It takes up 9 pts for the final score. <br />
+It is used to design and implement an AI that can play the boardgame chess.
 
 ## What I did
 
