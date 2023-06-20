@@ -20,7 +20,7 @@ Move Alpha_Beta::get_move(State *state, int depth){
   
   int sz = state->legal_actions.size();
   int bestmove = 0;
-  int bestvalue = -2147483647;
+  int bestvalue = -1000000;
   //int mininf = std::numeric_limits<int>::min();
   //int maxinf = std::numeric_limits<int>::max();
   for(int i=0;i<sz;i++){
@@ -41,7 +41,7 @@ int Alpha_Beta::getalphabeta(State *state, int depth, int alpha, int beta, int m
 
   if(maximizeplayer==1){
     //it is time for the player(you) to choose
-    int player_best = -2147483647;
+    int player_best = -1000000;
     for(auto it : state -> legal_actions){
       int value = getalphabeta(state->next_state(it), depth-1, alpha, beta ,0);
       if(player_best < value) player_best = value;
@@ -51,7 +51,7 @@ int Alpha_Beta::getalphabeta(State *state, int depth, int alpha, int beta, int m
     return player_best;
   }else if(maximizeplayer == 0){
     //it is time for your opponent to choose, he or she should choose the min, which can possibly beat you
-    int opp_best = 2147483647;
+    int opp_best = 1000000;
     for(auto it : state -> legal_actions){
       int value = getalphabeta(state->next_state(it), depth-1, alpha, beta, 1);
       if(opp_best > value) opp_best = value;

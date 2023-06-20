@@ -55,9 +55,6 @@ int State::evaluate(){
           score = score + 90 + add;
           break;
 
-        case 6: //6 means king
-          score = score + 500 + add;
-          break;
       }
 
       switch(opppiece){
@@ -81,9 +78,6 @@ int State::evaluate(){
           oppscore = oppscore - 90 - add;
           break;
 
-        case 6: //6 means king
-          oppscore = oppscore - 500 - add;
-          break;
       }
     }
   }
