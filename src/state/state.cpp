@@ -16,17 +16,24 @@ int State::evaluate(){
   int score = 0;
   int oppscore = 0;
   int finalscore = 0;
-  int add = 1;
+  int alteri = 0;
+  int alterj = 0;
   auto self_board = this->board.board[this->player];
   auto opp_board = this->board.board[!this->player];
   for(int i=0;i<BOARD_H;i++){
     for(int j=0;j<BOARD_W;j++){
       int nowpiece = self_board[i][j];
       int opppiece = opp_board[i][j];
-      if((i==2 || i==3) && j == 2){
-        add = 2;
-      }
+      if(i==0 || i==5) alteri = 1;
+      else if(i == 1 || i == 4) alteri = 2;
+      else if(i == 2 || i == 3) alteri = 3;
 
+      if(j==0 || j==5) alterj = 1;
+      else if(j == 1 || j == 4) alterj = 2;
+      else if(j == 2 || j == 3) alterj = 3;
+
+      int add = alteri + alterj;
+      
       switch(nowpiece){
         case 1: //1 means pawn
           score = score + 10 * add ;
