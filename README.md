@@ -34,7 +34,7 @@ Alpha Beta function: <br />
 
 ### Evaluation: <br />
 There are a lot of ways to evaluate. Here is what I tried. <br />
-**Noun explaination** <br />
+#### Noun explaination
 |Nouns|Definition|
 |----|----|
 |score|The heuristic value I returned|
