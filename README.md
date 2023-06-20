@@ -5,12 +5,27 @@ It is used to design and implement an AI that can play the boardgame chess.
 
 ## What I did
 
-the minimax method:
+### The Minimax Method: <br />
+The minimax tree chooses the maximum when it is the player's turn and chooses the minimum when it is the opponent's turn. <br />
+The psudocode: <br />
+![minimax](https://github.com/daisyliu0225/I2P_pj3_new/assets/50540881/947ae5cc-f9c9-4bdf-b088-89f8abea0155)
 
-the alpha-beta method:
-By pruning 
+### The Alpha-Beta Method: <br />
+By pruning the branches of the minimax tree. We can get a much faster algorithm. <br />
+
+The psudocode: <br />
+![alpha_beta](https://github.com/daisyliu0225/I2P_pj3_new/assets/50540881/fa11f974-220a-44ef-950e-4ccc60e3a93d)
+<br />
+The code I wrote: <br />
+Get move function: <br />
+![alpha_beta_get_move](https://github.com/daisyliu0225/I2P_pj3_new/assets/50540881/39751a3c-f6c6-45b5-b823-8cf34cc82c63)
+<br />
+Alpha Beta function: <br />
+![alpha_beta_get_alphabeta](https://github.com/daisyliu0225/I2P_pj3_new/assets/50540881/dc8143cc-df4f-44a4-9370-0beade1ec66f)
+<br />
 
 ## versions
+
 
 ### V1 -- Minimax Version
 Create repo <br />
@@ -57,8 +72,9 @@ Create alpha_beta files <br />
 Finished alpha beta pruning <br />
 --2023/06/19 23:02:25 PM <br />
 
-
-
+### V4 -- Fix Bugs
+Fixed bugs and update evaluation function. <br />
+--2023/06/20 21:33:10 PM <br />
 
 ## no-so-important-feelings
 
@@ -95,4 +111,6 @@ It is really fast! Wow! <br />
 --2023/06/19 <br />
 <br />
 Draw...TAT <br />
+--2023/06/20 <br />
+Finished! <br />
 --2023/06/20 <br />
