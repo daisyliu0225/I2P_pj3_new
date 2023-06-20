@@ -51,10 +51,41 @@ result: 1 lose 1 draw <br />
 #### Table 2: The relative score <br />
 my_score = my_queen * 20 + my_bishop * 8 + my_knight * 7 + my_rook * 6 + my_pawn * 2 <br />
 opp_score = opp_queen * 20 + opp_bishop * 8 + opp_knight * 7 + opp_rook * 6 + opp_pawn * 2 <br />
+score = my_score - opp_score <br />
 result: 1 lose 1 draw <br />
 
 #### Table 3: Relative Score + Weighted score according to location <br />
 **Location Chart** <br />
+|i|score|
+|---|---|
+|0 or 5|1|
+|1 or 4|2|
+|2 or 3|3|
+<br />
+|j|score|
+|---|---|
+|0 or 4|1|
+|1 or 3|2|
+|2|2|
+<br />
+weighted score = score_i * score_j
+<br />
+Therefore...
+my_score = (my_queen * 20 + weighted_score) + (my_bishop * 8 + weighted_score) + (my_knight * 7 + weighted_score) + (my_rook * 6 + weighted_score) + (my_pawn * 2 + weighted_score) <br />
+opp_score = (opp_queen * 20 + weighted_score) + (opp_bishop * 8 + weighted_score) + (opp_knight * 7 + weighted_score) + (opp_rook * 6 + weighted_score) + (opp_pawn * 2 + weighted_score) <br />
+<br />
+score = my_score - opp_score <br />
+result: 1 lose 1 draw
+
+#### Table 4: Relative Score + Weighted Score according to location ~ version 2
+The location chart and the score are the same
+However...
+my_score = (my_queen * 20 + weighted_score) + (my_bishop * 8 + weighted_score) + (my_knight * 7 + weighted_score) + (my_rook * 6 + weighted_score) + (my_pawn * 2 + weighted_score) <br />
+opp_score = (opp_queen * 20 - weighted_score) + (opp_bishop * 8 - weighted_score) + (opp_knight * 7 - weighted_score) + (opp_rook * 6 - weighted_score) + (opp_pawn * 2 - weighted_score) <br />
+<br />
+score = my_score - opp_score <br />
+result: 2 wins <br />
+PS: I don't know what happened, but this is really the result. <br />
 
 ## versions
 
