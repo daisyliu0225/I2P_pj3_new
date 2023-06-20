@@ -32,50 +32,50 @@ int State::evaluate(){
       else if(j == 1 || j == 4) alterj = 2;
       else if(j == 2 || j == 3) alterj = 3;
 
-      int add = alteri + alterj;
-      
+      int add = alteri * alterj;
+
       switch(nowpiece){
         case 1: //1 means pawn
-          score = score + 10 * add ;
+          score = score + 10 + add ;
           break;
         
         case 2: //2 means rook
-          score = score + 50 * add ;
+          score = score + 50 + add ;
           break;
         
         case 3: //3 means knight
-          score = score + 30 * add;
+          score = score + 30 + add;
           break;
 
         case 4: //4 means bishop
-          score = score + 30 * add;
+          score = score + 30 + add;
           break;
         
         case 5: //5 means queen
-          score = score + 90 * add;
+          score = score + 90 + add;
           break;
 
       }
 
       switch(opppiece){
         case 1: //1 means pawn
-          oppscore = oppscore - 10 * add;
+          oppscore = oppscore - 10 - add;
           break;
         
         case 2: //2 means rook
-          oppscore = oppscore - 50 * add;
+          oppscore = oppscore - 50 - add;
           break;
         
         case 3: //3 means knight
-          oppscore = oppscore - 30 * add;
+          oppscore = oppscore - 30 - add;
           break;
 
         case 4: //4 means bishop
-          oppscore = oppscore - 30 * add;
+          oppscore = oppscore - 30 - add;
           break;
         
         case 5: //5 means queen
-          oppscore = oppscore - 90 * add;
+          oppscore = oppscore - 90 - add;
           break;
 
       }
