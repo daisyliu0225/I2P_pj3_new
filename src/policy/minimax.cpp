@@ -23,7 +23,7 @@ Move Minimax::get_move(State *state, int depth){
   int bestmove = 0;
   int bestvalue = std::numeric_limits<int>::min();
   for(int i=0;i<sz;i++){
-    int value = getminimax(state->next_state(state->legal_actions[i]), depth-1, true);
+    int value = getminimax(state->next_state(state->legal_actions[i]), depth-1, 1);
     if(value > bestvalue){
       bestmove = i;
       bestvalue = value;
@@ -32,26 +32,26 @@ Move Minimax::get_move(State *state, int depth){
   return state->legal_actions[bestmove];
 }
 
-int Minimax::getminimax(State *state, int depth, bool maximizeplayer){
+int Minimax::getminimax(State *state, int depth, int maximizeplayer){
   if(depth == 0 || state->legal_actions.size()==0){
     return state->evaluate();
   }
   // if the tree goes to the final node or reaches the lowest depth, then it gives back the value
 
   int sz = state->legal_actions.size();
-  if(maximizeplayer==true){
+  if(maximizeplayer==1){
     //it is time for the player(you) to choose
     int player_best = std::numeric_limits<int>::min();
     for(int i=0;i<sz;i++){
-      int value = getminimax(state->next_state(state->legal_actions[i]), depth-1, false);
+      int value = getminimax(state->next_state(state->legal_actions[i]), depth-1, 0);
       if(player_best < value) player_best = value;
     }
     return player_best;
-  }else if(maximizeplayer==false){
+  }else{
     //it is time for your opponent to choose, he or she should choose the min, which can possibly beat you
     int opp_best = std::numeric_limits<int>::max();
     for(int i=0;i<sz;i++){
-      int value = getminimax(state->next_state(state->legal_actions[i]), depth-1, true);
+      int value = getminimax(state->next_state(state->legal_actions[i]), depth-1, 1);
       if(opp_best > value) opp_best = value;
     }
     return opp_best;
