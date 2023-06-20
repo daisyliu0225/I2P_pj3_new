@@ -32,7 +32,7 @@ int State::evaluate(){
       else if(j == 1 || j == 4) alterj = 3;
       else if(j == 2 || j == 3) alterj = 5;
 
-      int add = alteri * alterj;
+      int add = alteri + alterj;
 
       switch(nowpiece){
         case 1: //1 means pawn
