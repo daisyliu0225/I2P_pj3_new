@@ -55,19 +55,19 @@ int State::evaluate(){
 
       switch(opp_piece){
         case 1: //1 is pawn
-          opp_score = opp_score - 2;
+          opp_score = opp_score - 2 - add;
           break;
         case 2: //2 is rook
-          opp_score = opp_score - 6;
+          opp_score = opp_score - 6 - add;
           break;
         case 3: //3 is knight
-          opp_score = opp_score - 7;
+          opp_score = opp_score - 7 - add;
           break;
         case 4: //4 is bishop
-          opp_score = opp_score - 8;
+          opp_score = opp_score - 8 - add;
           break;
         case 5: //5 is queen
-          opp_score = opp_score - 20;
+          opp_score = opp_score - 20 - add;
           break;
       }
         
