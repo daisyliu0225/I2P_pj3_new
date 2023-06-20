@@ -25,12 +25,12 @@ int State::evaluate(){
       int nowpiece = self_board[i][j];
       int opppiece = opp_board[i][j];
       if(i==0 || i==5) alteri = 1;
-      else if(i == 1 || i == 4) alteri = 2;
-      else if(i == 2 || i == 3) alteri = 3;
+      else if(i == 1 || i == 4) alteri = 3;
+      else if(i == 2 || i == 3) alteri = 5;
 
       if(j==0 || j==5) alterj = 1;
-      else if(j == 1 || j == 4) alterj = 2;
-      else if(j == 2 || j == 3) alterj = 3;
+      else if(j == 1 || j == 4) alterj = 3;
+      else if(j == 2 || j == 3) alterj = 5;
 
       int add = alteri * alterj;
 
