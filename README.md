@@ -32,6 +32,19 @@ Alpha Beta function: <br />
 ![alpha_beta_get_alphabeta](https://github.com/daisyliu0225/I2P_pj3_new/assets/50540881/9190f68f-5091-4ae4-8af0-58c657424d69)
 <br />
 
+### Evaluation: <br />
+There are a lot of ways to evaluate. Here is what I tried. <br />
+Noun explaination : <br />
+|Nouns|Definition|
+|----|----|
+|score|The heuristic value I returned|
+|mytable|The chesspieces on my side|
+|opptable|The chesspieces on the opponent's side|
+|my/opp_(chesspiece)|The specific chesspiece on my/opponent's board|
+
+#### Table 1:
+score = my_queen * 20 + my_
+
 ## versions
 
 
