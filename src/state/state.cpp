@@ -55,8 +55,8 @@ int State::evaluate(){
           score = score + 90 + add;
           break;
 
-        case 6: //5 means queen
-          score = score + 900 + add;
+        case 6: //6 means king
+          score = score + 500 + add;
           break;
       }
 
@@ -81,8 +81,8 @@ int State::evaluate(){
           oppscore = oppscore - 90 - add;
           break;
 
-        case 6: //5 means queen
-          score = score - 900 - add;
+        case 6: //6 means king
+          score = score - 500 - add;
           break;
       }
     }
