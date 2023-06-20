@@ -91,3 +91,6 @@ Start coding! <br />
 Finished alpha beta pruning! <br />
 It is really fast! Wow! <br />
 --2023/06/19 <br />
+<br />
+Draw...TAT <br />
+--2023/06/20 <br />
