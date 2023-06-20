@@ -56,7 +56,7 @@ int State::evaluate(){
           break;
 
         case 6: //6 means king
-          score = score + 900 + add;
+          score = score + 500 + add;
           break;
       }
 
@@ -82,7 +82,7 @@ int State::evaluate(){
           break;
 
         case 6: //6 means king
-          oppscore = oppscore - 900 - add;
+          oppscore = oppscore - 500 - add;
           break;
       }
     }
