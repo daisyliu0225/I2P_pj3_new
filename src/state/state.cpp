@@ -32,7 +32,7 @@ int State::evaluate(){
       else if(j == 1 || j == 4) alterj = 3;
       else if(j == 2 || j == 3) alterj = 5;
 
-      int add = alteri * alterj;
+      int add = alteri + alterj;
 
       switch(nowpiece){
         case 1: //1 means pawn
@@ -55,7 +55,7 @@ int State::evaluate(){
           score = score + 9 + add;
           break;
 
-        case 6: //5 means queen
+        case 6: //6 means king
           score = score - 90 + add;
           break;
       }
@@ -81,7 +81,7 @@ int State::evaluate(){
           oppscore = oppscore - 9 - add;
           break;
 
-        case 6: //5 means queen
+        case 6: //6 means king
           oppscore = oppscore - 90 - add;
           break;
       }
